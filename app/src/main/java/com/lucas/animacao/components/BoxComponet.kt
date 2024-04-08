@@ -11,17 +11,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-@Composable
-fun BoxComponent(
-    visible: Boolean,
-    enter: EnterTransition,
-    exit: ExitTransition
-) {
-    AnimatedVisibility(
-        visible = visible,
-        enter = enter,
-        exit = exit
+    @Composable
+    fun BoxComponent(
+        visible: Boolean,
+        enter: EnterTransition,
+        exit: ExitTransition
     ) {
-        Box(modifier = Modifier.size(200.dp).background(color = Color.Red))
+        AnimatedVisibility(
+            visible = visible,
+            enter = enter,
+            exit = exit
+        ) {
+            Box(modifier = Modifier.size(200.dp).background(color = Color.Red))
+        }
     }
-}
+
